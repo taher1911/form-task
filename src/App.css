@@ -1,0 +1,112 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.App {
+  background: #121212;
+  min-height: 100vh;
+}
+.App .contaienr {
+  width: 95%;
+  padding: 20px 0;
+  margin: auto;
+}
+
+.title {
+  background: linear-gradient(
+    88deg,
+    #d9d9d9 -0.78%,
+    #9fcaea -0.77%,
+    #8575fb 43.63%,
+    #e7728b 85.97%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 100%;
+  text-align: center;
+  margin-top: 20vh;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 50px auto;
+  width: 100%;
+  max-width: 600px;
+}
+.form-group {
+  position: relative;
+}
+.form-group input,
+.form-group label,
+.form-group button {
+  transition: all 0.3s ease-in-out;
+}
+.form-group input {
+  background: transparent;
+  width: 100%;
+  height: 55px;
+  border: 2px solid #555;
+  border-radius: 20px;
+  padding: 0 15px;
+  color: #fff;
+  outline: none;
+  font-size: 18px;
+}
+.form-group label {
+  position: absolute;
+  height: 20px;
+  top: 15px;
+  left: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.form-group button {
+  width: 100%;
+  height: 55px;
+  background: #8575fb;
+  font-size: 17px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 20px;
+}
+
+.error {
+  color: #e7728b;
+  margin-top: 4px;
+}
+
+.form-group input:focus,
+.form-group input.valid,
+.form-group.active input {
+  border: 2px solid #8575fb;
+}
+
+.form-group.invalid input {
+  border: 2px solid #e7728b;
+}
+
+.form-group input:focus ~ label,
+.form-group input.valid ~ label,
+.form-group.active label {
+  top: -10px;
+  left: 15px;
+  font-size: 14px;
+  padding: 0 5px;
+  background: #121212;
+  border-left: 2px solid #8575fb;
+  border-right: 2px solid #8575fb;
+}
+
+.form-group input.invalid ~ label {
+  border: 2px solid #e7728b;
+}
